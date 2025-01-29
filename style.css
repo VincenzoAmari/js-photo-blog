@@ -21,7 +21,7 @@ h1 {
   display: grid;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
+  padding-block: 20px;
 }
 .photo {
   background: white;
@@ -38,7 +38,7 @@ h1 {
 
 .photo img {
   width: 100%;
-  max-width: 300px;
+  max-width: 600px;
   border-radius: 8px;
 }
 
