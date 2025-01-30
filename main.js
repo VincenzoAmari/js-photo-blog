@@ -64,8 +64,8 @@ fetch(endpoint)
     console.log("Errore nel recupero dei dati:", error);
   });
 
-board.addEventListener("click", function (e) {
-  const img = e.target.closest(".photo img");
+board.addEventListener("click", function (immagine) {
+  const img = immagine.target.closest(".photo img");
   if (img) {
     const imageUrl = img.getAttribute("data-url");
     overlay.style.display = "flex";
