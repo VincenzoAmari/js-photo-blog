@@ -52,7 +52,7 @@ fetch(endpoint)
         <div class="photo">
           <img src="img/pin.svg" alt="Pin" class="pin-icon">
           <img src="${url}" alt="${title}"/>
-          <span class="caption">${date}</span>
+          <span class="caption">${date}</span>s
           <h3>${title}</h3>
         </div>
       `;
