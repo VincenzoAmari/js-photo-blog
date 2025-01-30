@@ -25,5 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         board.appendChild(photoDiv);
       });
     })
-    .catch((error) => {});
+    .catch((error) => {
+      console.log(error);
+    });
 });
