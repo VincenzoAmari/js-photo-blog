@@ -37,34 +37,26 @@
 //   }
 // ]
 
-document.addEventListener("DOMContentLoaded", function () {
-  const board = document.querySelector(".board");
+const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
+const methodFetch = { method: "GET" };
 
-  fetch("https://lanciweb.github.io/demo/api/pictures/")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      board.innerHTML = "";
+const board = document.querySelector(".board");
 
-      data.forEach((item) => {
-        const photoDiv = document.createElement("div");
-        photoDiv.classList.add("photo");
+fetch(endpoint)
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((item) => {
+      const { date, id, title, url } = item;
 
-        const img = document.createElement("img");
-        img.src = item.url;
-        img.alt = item.title;
-
-        const caption = document.createElement("p");
-        caption.classList.add("caption");
-        caption.textContent = `${item.title} - ${item.date}`;
-
-        photoDiv.appendChild(img);
-        photoDiv.appendChild(caption);
-        board.appendChild(photoDiv);
-      });
-    })
-    .catch((error) => {
-      console.log(error);
+      board.innerHTML += `
+        <div class="photo">
+          <img src="${url}" alt="${title}"/>
+          <span class="caption">${date}</span>
+          <h3>${title}</h3>
+        </div>
+      `;
     });
-});
+  })
+  .catch((error) => {
+    console.log("Errore nel recupero dei dati:", error);
+  });
