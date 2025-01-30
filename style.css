@@ -8,6 +8,7 @@ body {
   font-family: "Edu TAS Beginner", sans-serif;
   background-color: #f5f5dc;
   text-align: center;
+  background-image: url(img/cork.png);
 }
 
 .head {
