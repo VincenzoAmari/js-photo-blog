@@ -8,7 +8,11 @@ body {
   font-family: "Edu TAS Beginner", sans-serif;
   background-color: #f5f5dc;
   text-align: center;
-  padding: 20px;
+}
+
+.head {
+  background-image: url(img/wall.png);
+  height: 15vh;
 }
 
 h1 {
@@ -22,6 +26,7 @@ h1 {
   gap: 20px;
   justify-content: center;
   padding-block: 20px;
+  padding: 20px;
 }
 .photo {
   background: white;
