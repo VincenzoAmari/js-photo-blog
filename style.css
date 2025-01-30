@@ -41,6 +41,7 @@ h3 {
   padding: 20px;
 }
 .photo {
+  position: relative;
   background: white;
   padding: 10px;
   border-radius: 10px;
@@ -63,6 +64,15 @@ h3 {
   font-family: "Sometype Mono", monospace;
   font-size: 1rem;
   margin-top: 10px;
+}
+
+.pin-icon {
+  position: absolute;
+  top: -2%;
+  left: 47%;
+  z-index: 10;
+  width: 40px !important;
+  height: auto !important;
 }
 
 /* MEDIA QUERIES */
