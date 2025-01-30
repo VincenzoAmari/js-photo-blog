@@ -96,10 +96,8 @@ h3 {
 
 #close-overlay {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  background: red;
-  color: white;
+  top: 90px;
+  right: 44%;
   font-size: 1.5rem;
   border: none;
   padding: 10px 20px;
@@ -107,8 +105,7 @@ h3 {
   border-radius: 5px;
 }
 
-#close-overlay:hover {
-  background: darkred;
+#close-overlay {
 }
 /* MEDIA QUERIES */
 

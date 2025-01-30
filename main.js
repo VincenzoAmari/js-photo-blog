@@ -41,6 +41,8 @@ const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 const methodFetch = { method: "GET" };
 
 const board = document.querySelector(".board");
+const overlay = document.querySelector(".overlay");
+const overlayImage = document.getElementById("overlay-image");
 
 fetch(endpoint)
   .then((response) => response.json())
@@ -63,8 +65,9 @@ fetch(endpoint)
   });
 
 board.addEventListener("click", function (e) {
-  const img = this.querySelector("img");
+  const img = e.target.closest(".photo img");
   if (img) {
+    const imageUrl = img.getAttribute("data-url");
     overlay.style.display = "flex";
     overlayImage.src = img.src;
   }
