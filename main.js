@@ -62,6 +62,17 @@ fetch(endpoint)
     console.log("Errore nel recupero dei dati:", error);
   });
 
+board.addEventListener("click", function (e) {
+  const img = this.querySelector("img");
+  if (img) {
+    overlay.style.display = "flex";
+    overlayImage.src = img.src;
+  }
+});
+
+document.getElementById("close-overlay").addEventListener("click", () => {
+  overlay.style.display = "none";
+});
 /////////Versione precedente con classlist create element e appendchild//////
 
 // document.addEventListener("DOMContentLoaded", function () {
